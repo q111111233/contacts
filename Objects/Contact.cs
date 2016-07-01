@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Contact
+namespace AddressBook
 {
   public class Contact
   {
@@ -49,7 +49,7 @@ namespace Contact
     {
       return _instances;
     }
-    public void Save()
+    public static void Save()
     {
       _instances.Add(this);
     }

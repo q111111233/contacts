@@ -1,7 +1,14 @@
-<h1>You created a contact!</h1>
-<h2>your new contact name is @Model.GetName()</h2>
-<h2>your new contact phone number is @Model.GetPhoneNumber()</h2>
-<h2>your new contact address is @Model.GetAddress()</h2>
+@if(@Model.GetName() == "" || @Model.GetPhoneNumber() == "" || @Model.GetAddress() == "")
+{
+  <h1>Please fill up the form completely</h1>
+}
+else
+{
+  <h1>You created a contact!</h1>
+  <h2>your new contact name is @Model.GetName()</h2>
+  <h2>your new contact phone number is @Model.GetPhoneNumber()</h2>
+  <h2>your new contact address is @Model.GetAddress()</h2>
+}
 <form action='/' method='get'>
   <button type='click'>Back to Main Page</button>
 </form>

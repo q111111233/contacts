@@ -1,8 +1,8 @@
 using Nancy;
 using System.Collections.Generic;
-using Contact;
+using AddressBook;
 
-namespace Contact
+namespace AddressBook
 {
   public class HomeModule : NancyModule
   {
