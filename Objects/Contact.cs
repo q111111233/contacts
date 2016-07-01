@@ -59,7 +59,7 @@ namespace Contact
     }
     public static Contact Find(int searchId)
     {
-      return _instances[searchId-1];
+      return _instances[searchId];
     }
   }
 }

@@ -27,6 +27,13 @@ namespace Contact
         Contact.ClearAll();
         return View["contacts_cleared.cshtml"];
       };
+      Get["/contacts/{id}"] = parameters => {
+        return View["contact.cshtml", Contact.Find(parameters.id)];
+      };
+      Get["/contacts_deleted"] = _ => {
+        Contact.ClearAll();
+        return View["contacts_cleared.cshtml"];
+      };
     }
   }
 }
