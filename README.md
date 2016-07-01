@@ -18,9 +18,9 @@ _This is an address book where you can store contact information for people you 
 
 ## Technologies Used
 
-_C#_
-_Razor_
-_Nancy_
+* _C#_
+* _Razor_
+* _Nancy_
 
 ### License
 

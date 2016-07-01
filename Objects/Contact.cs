@@ -49,7 +49,7 @@ namespace AddressBook
     {
       return _instances;
     }
-    public static void Save()
+    public void Save()
     {
       _instances.Add(this);
     }

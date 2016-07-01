@@ -1,8 +1,20 @@
 <h1>Contacts</h1>
-<ul>
-  @foreach (var contact in Model)
-  {
-    <li><a href='/contacts/@contact.GetId()'>@contact.GetName()</a></li>
-  }
-</ul>
-<a href='/contacts/new'>Add New Contact</a>
+@if(Model.Count < 1)
+{
+  <h1>The list is empty, please add a new contact.</h1>
+}
+else
+{
+  <ul>
+    @foreach (var contact in Model)
+    {
+      <li><a href='/contacts/@contact.GetId()'>@contact.GetName()</a></li>
+    }
+  </ul>
+}
+<form action="/contacts/new" method='get'>
+  <button type='click'>Add a New Contact</button>
+</form>
+<form action='/' method='get'>
+  <button type='click'>Back to Main Page</button>
+</form>
